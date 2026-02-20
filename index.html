@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>File Upload</h1>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input type="search" id="search" placeholder="Search files..." autocomplete="off">
+      </div>
+    </header>
+
+    <main>
+      <section class="upload-zone" id="uploadZone">
+        <input type="file" id="fileInput" multiple hidden>
+        <p class="upload-prompt">Drag & drop files here or <button type="button" id="browseBtn">browse</button></p>
+      </section>
+
+      <section class="file-list" id="fileList">
+        <h2>Uploaded files</h2>
+        <div class="filter-bar" id="filterBar"></div>
+        <div class="stats-dashboard">
+          <span class="stat" id="statCount">0 files</span>
+          <span class="stat" id="statSize">0 B</span>
+        </div>
+        <ul id="fileItems"></ul>
+        <p class="empty-msg" id="emptyMsg">No files uploaded yet.</p>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
